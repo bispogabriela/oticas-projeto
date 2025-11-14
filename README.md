@@ -1,16 +1,104 @@
-# React + Vite
+Sistema de Controle de Estoque – Óticas Carol
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um sistema simples para controle de produtos em estoque da Óticas Carol.
+O objetivo é permitir o cadastro, listagem e remoção de produtos, utilizando tecnologias web modernas.
+O sistema foi desenvolvido como parte de um projeto acadêmico/extensão.
 
-Currently, two official plugins are available:
+Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Cadastro de novos produtos
 
-## React Compiler
+Listagem completa dos produtos cadastrados
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Remoção de produtos
 
-## Expanding the ESLint configuration
+Integração total com banco de dados MySQL/MariaDB
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Interface simples e personalizada com a identidade da Óticas Carol
+
+
+Tecnologias Utilizadas
+
+Frontend
+
+React
+
+Vite
+
+CSS
+
+Backend
+
+Node.js
+
+Express
+
+MySQL2
+
+CORS
+
+Dotenv
+
+Banco de Dados
+
+MariaDB / MySQL
+
+
+
+
+
+
+Estrutura do Projeto
+
+O projeto é dividido em duas partes:
+
+oticas-projeto/
+ - backend/    → servidor Node.js e rotas da API
+ - frontend/   → interface React do sistema
+
+
+
+Como Executar o Projeto
+1. Iniciar o Backend
+
+Na pasta backend:
+
+npm install
+node server.js
+2. Iniciar o Frontend
+
+Na pasta frontend:
+
+npm install
+npm run dev
+
+
+Banco de Dados Utilizado
+
+Crie o banco:
+
+CREATE DATABASE oticas_db;
+
+Crie a tabela:
+
+CREATE TABLE produtos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  quantidade INT NOT NULL,
+  preco DECIMAL(10,2) NOT NULL
+);
+
+
+Sobre o Projeto
+
+Este sistema foi criado para fins educacionais, aplicando conceitos de:
+
+Desenvolvimento web
+
+Modelagem de banco de dados
+
+API REST
+
+Versionamento com Git e GitHub
+
+Autora: Gabriela Bispo Nogueira
